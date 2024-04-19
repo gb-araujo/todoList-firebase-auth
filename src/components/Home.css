@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2e6; /* Bege claro */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: #ffffff; /* Branco */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #4d4d33; /* Azul escuro */
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #b3b3cc; /* Azul claro */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #66cccc; /* Turquesa */
+  color: #ffffff; /* Branco */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #339999; /* Turquesa mais escuro */
+}
+
+button:last-child {
+  margin-top: 20px;
+}
+
+.error {
+  color: #ff0000;
+  text-align: center;
+}
+.cat {
+  display: block; /* Isso garante que a margem horizontal seja aplicada corretamente */
+  margin: 0 auto; /* Isso centraliza a imagem horizontalmente */
+}
+
+
+.user-info {
+  margin-top: 20px;
+}
+
+.user-info h2 {
+  margin-bottom: 10px;
+}
+
+.user-info p {
+  margin: 5px 0;
+}
+
+.loginGoogle {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: center;
+  border: 1px solid green;
+}
+
+.googleImagem {
+  width: 15px;
+  margin-right: 10px;
+}
