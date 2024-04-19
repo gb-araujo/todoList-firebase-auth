@@ -46,7 +46,7 @@ function Tarefas() {
 
   return (
     <div className="lista-de-tarefas">
-      <h1>Tarefas Etec</h1>
+      <h1>Tarefas</h1>
       {mostrarFormulario && (
         <div className="adicionar-tarefa">
           <input

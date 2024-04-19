@@ -31,8 +31,10 @@
   .adicionar-tarefa {
     margin-bottom: 20px;
   }
+
   
   .adicionar-tarefa input {
+    width: 382px;
     padding: 8px;
     margin-right: 10px;
     border: 1px solid #ccc;
