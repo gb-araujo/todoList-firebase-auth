@@ -1,11 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
 import './Tarefas.css';
+import firebase from 'firebase/compat/app'; // Import for Firebase functionality
+import { useNavigate } from 'react-router-dom'; // Import for navigation
 
 function Tarefas() {
   const [tarefas, setTarefas] = useState([]);
   const [novaTarefa, setNovaTarefa] = useState('');
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const navigate = useNavigate(); // Utilize useNavigate for navigation
 
   useEffect(() => {
     const tarefasArmazenadas = JSON.parse(localStorage.getItem('tarefas'));
@@ -32,9 +34,19 @@ function Tarefas() {
     setTarefas(novaLista);
   };
 
+  const handleLogout = () => {
+    firebase.auth().signOut()
+      .then(() => {
+        navigate("/"); // Redirect to Home after logout
+      })
+      .catch((error) => {
+        console.error(error); // Handle logout error
+      });
+  };
+
   return (
     <div className="lista-de-tarefas">
-      <h1>Tarefas Etec</h1>  
+      <h1>Tarefas Etec</h1>
       {mostrarFormulario && (
         <div className="adicionar-tarefa">
           <input
@@ -57,6 +69,7 @@ function Tarefas() {
           </li>
         ))}
       </ul>
+      <button className="logoutButton" onClick={handleLogout}>SAIR</button>  {/* Logout button */}
     </div>
   );
 }

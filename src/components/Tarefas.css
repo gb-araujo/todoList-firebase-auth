@@ -38,6 +38,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
   
   .adicionar-tarefa button {
     padding: 8px 16px;
@@ -79,3 +80,10 @@
     z-index: 2; /* Garante que o botão de exclusão esteja sobre a tarefa */
   }
   
+  .logoutButton {
+    position: fixed;
+    top: 20px; 
+    right: 20px;
+    width: 50px;
+}
+
